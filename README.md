@@ -14,23 +14,24 @@ Primeiro, instale a biblioteca via `npm`:
 
 ```bash
 npm install my-react-library
+```
 
-2. Configure o TailwindCSS
+### 2. Configure o TailwindCSS
 
 Se o TailwindCSS ainda não estiver configurado no seu projeto, siga os passos abaixo:
 
-    Instale o TailwindCSS e suas dependências:
+-Instale o TailwindCSS e suas dependências:
 
-bash
 
+```bash
 npm install tailwindcss postcss autoprefixer
 npx tailwindcss init
-
-    Configure o arquivo tailwind.config.js:
+```
+-Configure o arquivo tailwind.config.js:
 
 No arquivo tailwind.config.js, adicione o caminho da biblioteca para garantir que as classes de Tailwind dentro dos componentes sejam processadas corretamente:
-
-js
+```javascript
+//tailwind.config.js
 
 module.exports = {
   content: [
@@ -42,24 +43,26 @@ module.exports = {
   },
   plugins: [],
 }
-
-    Implemente o CSS do Tailwind no seu projeto:
-
+```
+-Implemente o CSS do Tailwind no seu projeto:
 No arquivo CSS principal do seu projeto (por exemplo, src/index.css), adicione as diretivas do Tailwind:
 
-css
+```css
+//index.css
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
 
-3. Como Usar os Componentes
+### 3. Como Usar os Componentes
 
 Após a configuração do TailwindCSS, você pode começar a usar os componentes da biblioteca no seu projeto.
 
 Exemplo de uso:
 
-jsx
+```javascript
+//App.jsx
 
 import React from 'react';
 import { MeuComponente } from 'my-react-library';
@@ -73,12 +76,12 @@ function App() {
 }
 
 export default App;
-
-4. Personalização
+```
+### 4. Personalização
 
 Como o TailwindCSS está configurado no seu projeto, você pode personalizar os estilos dos componentes diretamente no seu arquivo tailwind.config.js, adicionando cores, fontes ou espaçamentos personalizados.
-
-js
+```javascript
+//tailwind.config.js
 
 module.exports = {
   theme: {
@@ -91,27 +94,24 @@ module.exports = {
   },
   plugins: [],
 }
-
-5. Contribuição
+```
+### 5. Contribuição
 
 Se você deseja contribuir para o desenvolvimento desta biblioteca, siga as etapas abaixo:
 
-    Faça o fork do repositório.
-    Crie uma nova branch: git checkout -b minha-nova-feature.
-    Faça suas alterações e commit: git commit -m 'Adiciona nova feature'.
-    Envie as mudanças: git push origin minha-nova-feature.
-    Abra um Pull Request para revisão.
+- Faça o fork do repositório.
+- Crie uma nova branch: git checkout -b minha-nova-feature.
+- Faça suas alterações e commit: git commit -m 'Adiciona nova feature'.
+- Envie as mudanças: git push origin minha-nova-feature.
+- Abra um Pull Request para revisão.
 
-FAQ
-O que acontece se eu não configurar o Tailwind no meu projeto?
+### 6. FAQ
 
-Os componentes não terão o estilo correto e você verá apenas o HTML básico. Para garantir que os estilos funcionem como esperado, certifique-se de seguir a seção de configuração do TailwindCSS.
-Preciso ter Tailwind configurado no meu projeto?
+*O que acontece se eu não configurar o Tailwind no meu projeto?*
+-Os componentes não terão o estilo correto e você verá apenas o HTML básico. Para garantir que os estilos funcionem como esperado, certifique-se de seguir a seção de configuração do TailwindCSS.
 
-Sim, esta biblioteca depende do TailwindCSS para aplicar os estilos aos componentes. Por isso, o Tailwind deve estar configurado corretamente no seu projeto.
-Licença
-
-Esta biblioteca é distribuída sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+*Preciso ter Tailwind configurado no meu projeto?*
+-Sim, esta biblioteca depende do TailwindCSS para aplicar os estilos aos componentes. Por isso, o Tailwind deve estar configurado corretamente no seu projeto.
 
 ### Explicação das Seções do `README.md`:
 
@@ -121,6 +121,3 @@ Esta biblioteca é distribuída sob a licença MIT. Consulte o arquivo LICENSE p
 4. **Personalização**: Explica como o Tailwind pode ser customizado diretamente no projeto do cliente.
 5. **Contribuindo**: Instruções para desenvolvedores que desejam colaborar com o projeto.
 6. **FAQ**: Seção de perguntas frequentes para ajudar usuários com problemas comuns.
-7. **Licença**: Um aviso sobre a licença do projeto.
-markdown
-```
