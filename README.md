@@ -13,7 +13,7 @@ Siga os passos abaixo para configurar e usar a biblioteca no seu projeto.
 Primeiro, instale a biblioteca via `npm`:
 
 ```bash
-npm install my-react-library
+npm install lib-texsa
 ```
 
 ### 2. Configure o TailwindCSS
@@ -36,7 +36,7 @@ No arquivo tailwind.config.js, adicione o caminho da biblioteca para garantir qu
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    './node_modules/my-react-library/dist/**/*.{js,jsx}'  // Adiciona a biblioteca aqui
+    './node_modules/lib-texsa/dist/**/*.{js,jsx}'  // Adiciona a biblioteca aqui
   ],
   theme: {
     extend: {},
@@ -65,12 +65,12 @@ Exemplo de uso:
 //App.jsx
 
 import React from 'react';
-import { MeuComponente } from 'my-react-library';
+import { MainContainer } from 'lib-texsa';
 
 function App() {
   return (
     <div>
-      <MeuComponente />
+      <MainContainer />
     </div>
   );
 }
